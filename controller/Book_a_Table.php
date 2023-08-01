@@ -30,6 +30,6 @@ if (isset($_POST["send"])) {
     }
 }
 // Include the view file
-include "/home/voodoo/Desktop/php_Restaurant/views/reserv.html";
+include "/home/voodoo/Desktop/ARIJ/views/reserv.html";
 ?>
 

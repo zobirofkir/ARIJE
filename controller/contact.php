@@ -24,5 +24,5 @@ if (isset($_POST["contact"])) {
 
 }
 
-include "/home/voodoo/Desktop/php_Restaurant/views/contact.html";
+include "/home/voodoo/Desktop/ARIJ/views/contact.html";
 ?>
