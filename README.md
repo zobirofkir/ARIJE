@@ -1,7 +1,7 @@
 Arije Restaurant and Coffee - Website Project
 
 
-![ARIJE Logo](https://i.pinimg.com/originals/16/1f/cd/161fcda88bb08717334cdb15c1ebafe0.jpg)
+![ARIJE Logo](https://images-platform.99static.com/x6wes6gRzyCuFSiwO7QIS745VLY=/0x0:1928x1928/500x500/top/smart/99designs-contests-attachments/92/92568/attachment_92568208)
 
 Arije Restaurant and Coffee
 
