@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link href="/style/assets/img/favicon.png" rel="icon">
+    <link href="/style/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="/style/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/style/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/style/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/style/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/style/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/style/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="/style/assets/css/style.css" rel="stylesheet">  
+
+
+    <style>
+      form {
+          max-width: 600px;
+          margin: 0 auto;
+          text-align: center;
+      }
+
+      .section-title{
+        text-align: center;
+      }
+
+      .form-group {
+          margin-bottom: 20px;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="time"],
+      input[type="number"],
+      textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+      }
+
+      textarea {
+          resize: vertical;
+      }
+
+      .text-center {
+          text-align: center;
+      }
+
+      button[type="submit"] {
+          background-color: #929d00;
+          color: #000000;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+          background-color: #137c00;
+      }
+
+      .mb-3 {
+          margin-bottom: 30px;
+      }
+
+      .loading,
+      .error-message,
+      .sent-message {
+          display: none;
+      }
+
+      .form-success .sent-message {
+          display: block;
+          color: #007bff;
+      }
+
+      .form-error .error-message {
+          display: block;
+          color: #ff0000;
+      }
+      .medal{
+        font-weight: 900;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: lightblue;
+        font-size: 20px;
+      }
+
+  </style>
+</head>
+<body>
+
+    <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+    
+          <h1 class="logo me-auto me-lg-0"><a href="/views/index.html">CAFE-ARIJE</a></h1>
+
+        </div>
+      </header>  
+    
+    
+      <br><br><br><br>
+
+    <section id="book-a-table" class="book-a-table">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Reservation</h2>
+            <p>Book a Table</p>
+          </div>
+  
+          <form action="" method="post" role="form" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                <input type="text" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                <div class="validate"></div>
+              </div>
+              <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="col-lg-4 col-md-6 form-group mt-3">
+                <input type="date" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="col-lg-4 col-md-6 form-group mt-3">
+                <input type="time" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="col-lg-4 col-md-6 form-group mt-3">
+                <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="message" rows="5" placeholder="Message">
+              <div class="validate"></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+            </div>
+            <div class="text-center">
+              <button type="submit" name="send" class="btn btn-warning">Book a Table</button>
+          </div>
+          <br>
+          <?php if ($success) : ?>
+          <div class="medal">We will contact you soon at  this email <?php echo htmlspecialchars($_POST["email"]); ?>  or this phone <?php echo htmlspecialchars($_POST["phone"]); ?>  Thank you!</div>              </form>
+          <?php endif; ?>   
+
+          <?php if ($error) : ?>
+          <div class="medal"><?php echo $error; ?></div>
+          <?php endif; ?>  
+        </form>
+
+
+        </div>
+      </section>
+
+  
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-info">
+                  <h3>CAFE-ARIJE</h3>
+                  <p>
+                    Ine soltane <br>
+                    Morocco<br><br>
+                    <strong>Phone:</strong> +1 5589 55488 55<br>
+                    <strong>Email:</strong> Zobirofkir19@gmail.com<br>
+                  </p>
+                  <div class="social-links mt-3">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Gyros</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Doner Kebab</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Falafel</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Tacos</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Burritos</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 footer-newsletter">
+                <h4>Any question</h4>
+                <p></p>
+                <form action="" method="post">
+                  <input type="email" name="email"><input type="submit" value="Subscribe">
+                </form>
+    
+              </div>
+    
+            </div>
+          </div>
+        </div>
+    
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Arige</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="">Zobir ofkir</a>
+          </div>
+        </div>
+      </footer><!-- End Footer -->
+    
+        
+
+      <script src="/style/assets/vendor/aos/aos.js"></script>
+      <script src="/style/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="/style/assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="/style/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="/style/assets/vendor/php-email-form/validate.js"></script>
+      <script src="/style/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    
+      <!-- Template Main JS File -->
+      <script src="/style/assets/js/main.js"></script>    
+</body>
+</html>
